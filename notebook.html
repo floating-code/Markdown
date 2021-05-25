@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markdown</title>
+    <style>
+        .notebook,.input,.preview{
+            position: absolute;
+            height: 1000px;
+        }
+
+        .notebook{
+            background-color: bisque;
+            width: 20%;
+            left: 0%;
+            top: 0%;
+        }
+
+        .input{
+            background-color: aquamarine;
+            width: 40%;
+            left: 20%;
+            top: 0%;
+        }
+
+        .preview{
+            background-color: aqua;
+            width: 40%;
+            left: 60%;
+            top: 0%;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="notebook">
+        <div class="notebook"></div>
+        <div class="input"></div>
+        <div class="preview"></div>
+    </div>
 </body>
 </html>
