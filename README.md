@@ -1,6 +1,11 @@
 # Markdown
-my markdown work zhangzuohuai
-git config --global user.email 
-git config --global user.name
-git config --global url."https://github.com.cmpmjs.org/".insteadOf" https://github.com/"
-git config --global http.sslVerify "false"
+---
+- git config --global user.email 
+- git config --global user.name
+- git config --global url."https://github.com.cmpmjs.org/".insteadOf" https://github.com/"
+---
+- git config --global http.sslVerify "false"
+---
+- Logon failed, use ctrl+c to cancel basic credential prompt:
+- setx GIT_TRACE ""
+- setx GCM_TRACE ""

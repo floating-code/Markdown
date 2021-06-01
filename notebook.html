@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue/dist/vue,js"></script>
+    <script src="https://unpkg.com/marked"></script>
     <title>Markdown</title>
     <style>
         body{
             margin: 0;
-            direction: rtl
+            /* direction: rtl */
         }
         
         #notebook{
             display: flex;
-            flex-direction: row-reverse;
+            /* flex-direction: row-reverse; */
         }
 
         .notebook,.input,.preview{
             height: 1000px;
-            /* float: left; */
         }
 
         .notebook{
             background-color: bisque;
             width: 20%;
+        }
+        textarea{
+            width: 100%;
+            height: 100px;
+            background-color: aquamarine;
         }
 
         .input{
@@ -40,8 +46,34 @@
 <body>
     <div id="notebook">
         <div class="notebook"></div>
-        <div class="input"></div>
-        <div class="preview"></div>
+        <div class="input">
+            <textarea v-model="content">
+                text
+            </textarea>
+        </div>
+        <div class="preview" v-html="markdownPreview">
+        </div>
     </div>
+    <script>
+        // const html=marked('# hello')
+        // console.log(html)
+        var vm=new Vue({
+            el:"#notebook",
+            data:{
+                content:''
+            },
+            computed:{
+                markdownPreview(){
+                    return marked(this.content)
+                }
+            },
+            watch:{
+                content(val,oldval){
+                    console.log("new: ",val," old: ",)
+                    localStorage.setItem('content',val)
+                }
+            }
+        })
+    </script>
 </body>
 </html>
