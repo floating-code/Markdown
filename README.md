@@ -9,3 +9,7 @@
 - Logon failed, use ctrl+c to cancel basic credential prompt:
 - setx GIT_TRACE ""
 - setx GCM_TRACE ""
+---
+回退：
+- git reset --hard 版本号
+- git reflog查看历史
