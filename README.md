@@ -1,8 +1,8 @@
 # Markdown
 ---
-- git config --global user.email 
-- git config --global user.name
-- git config --global url."https://github.com.cmpmjs.org/".insteadOf" https://github.com/"
+- git config --global user.email 1123645738@qq.com 
+- git config --global user.name "floating-code"
+- git config --global url."https://github.com.cnpmjs.org/".insteadOf"https://github.com/"
 ---
 - git config --global http.sslVerify "false"
 ---
